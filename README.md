@@ -11,10 +11,33 @@ of that system. (Vitalik Buterin)
 
 ### Table of Content
 
+- [Related Fields](#related-fields)
+- [Building Blocks](#building-blocks)
 - [Concepts](#concepts)
 - [Security Models](#security-models)
 - [Examples of Cryptoeconomic Systems](#examples-of-cryptoeconomic-systems)
-- [Useful Links](#useful-links)
+- [Resources](#resources)
+
+---
+
+### Building Blocks
+
+**From cryptography**:
+
+- Hashes
+- Signatures
+- ZKPs
+- PoW
+- Erasure Codes
+- Timelock crypto / sequential PoW
+- Homomorphic encryption / obfuscation
+
+**From economy**:
+
+Incentives: 
+
+- rewards/penalties
+- privileges
 
 ---
 
@@ -107,13 +130,14 @@ The other half has an incentive to vote with the attacker.
 
 ---
 
-### Useful Links
+### Resources
 
-- Introduction to Cryptoeconomics - Vitalik Buterin https://www.youtube.com/watch?v=pKqdjaH1dRo
-- Hard problems in Cryptoeconomics - Vitalik Buterin https://www.youtube.com/watch?v=p5qwbOkCZSc
-- Cryptoeconomic Protocols In the Context of Wider Society - Vitalik Buterin https://www.youtube.com/watch?v=S47iWiKKvLA
-- Programmable Incentives: Intro to Cryptoeconomics - Karl Floersch https://www.youtube.com/watch?v=-alrVUv6E24
-- The Current State of Cryptoeconomics - Vlad Zamfir https://www.youtube.com/watch?v=u6VSPD5TrP4
+- Videos
+  - Introduction to Cryptoeconomics - Vitalik Buterin https://www.youtube.com/watch?v=pKqdjaH1dRo
+  - Hard problems in Cryptoeconomics - Vitalik Buterin https://www.youtube.com/watch?v=p5qwbOkCZSc
+  - Cryptoeconomic Protocols In the Context of Wider Society - Vitalik Buterin https://www.youtube.com/watch?v=S47iWiKKvLA
+  - Programmable Incentives: Intro to Cryptoeconomics - Karl Floersch https://www.youtube.com/watch?v=-alrVUv6E24
+  - The Current State of Cryptoeconomics - Vlad Zamfir https://www.youtube.com/watch?v=u6VSPD5TrP4
 - Security Models Explained in Sharding FAQ https://github.com/ethereum/wiki/wiki/Sharding-FAQ#what-are-the-security-models-that-we-are-operating-under
 - Hard Problems of Cryptoeconomics https://github.com/ethereum/wiki/wiki/Problems
 - Hard Problems of Cryptocurrency 2015 https://github.com/ethereum/wiki/wiki/HPOC_2015
