@@ -1,16 +1,86 @@
 # Cryptoeconomics Cheat Sheet
 
-**Cryptoeconomics** is 
+**Cryptoeconomics**  - generalized field that deals with large class of systems that try to use both 
+cryptographic tools and economic incentives defined in the system in order to achieve information security goals 
+of that system. (Vitalik Buterin)
+ - cryptography can prove properties about messages that happened in the past.
+ - economic incentives can encourage desired properties to hold into the future.
+
+**Cryptoeconomics** (alternative definition) - the application of incentive mechanism design to information 
+ security problems (Vlad Zamfir).
 
 ### Table of Content
 
+- [Concepts](#concepts)
 - [Security Models](#security-models)
 - [Useful Links](#useful-links)
 
 ---
 
+### Concepts
+
+**Economic resource** - a resource possession of which gives agents the right to collectively perform state transitions 
+in the cryptoeconomic system.
+ - computing power
+ - cryptocurrency / token
+
+**Economic set** - all agents possessing economic resource.
+
+**Cryptoeconomic Security Margin** - an amount of money X such that you can prove "either a given guarantee G is 
+satisfied or those at fault for violating G are poorer than they otherwise would have been by at least X".
+ - if expressed as a percentage or a ratio, represents the ratio of the economic set, e.g. security margin of 0.5
+ means that it costs the attacker half of all computing power cost to violate the guarantee G.
+ 
+
+**Cryptoeconomic proof** - a message signed by an actor that can be interpreted as "I certify that either P is true,
+or I suffer an economic loss of size X".
+
+---
+
 ### Security Models
 
+Security models are different in the assumptions that they make about the real world. It's not clear what assumptions
+are more realistic, nevertheless it's useful to perform analysis in different models to have the clearer picture about
+the security of a system.
+
+Different security models give different security margins.
+
+**Honest Majority** - assumes that up to X (usually a number less that 1/2) of agents are controlled by an attacker, 
+and the remaining agents honestly follow the protocol.
+ - **Tranditional Fault Tolerance** - assumes almost all agents are honest (X is close to 0).
+ - **Bysantine Fault Tolerance** - assumes up to 1/3 of agents are controlled by an attacker.
+
+**Uncoordinated Majority** - assumes that up to X (often between 1/4 and 1/2) of agents are capable of coordinating 
+their actions, all agents are rational in a game-theoretic sense.
+
+**Coordinated Majority** - assumes that all agents are controlled by the same actor, or are fully capable of coordinating 
+on the economically optimal choice between themselves. We can talk about the cost to the coalition 
+(or profit to the coalition) of achieving some undesirable outcome.
+
+**Bribing Attacker** - takes the uncoordinated majority model, but instead of making the attacker be one of the participants, 
+the attacker sits outside the protocol, and has the ability to bribe any participants to change their behavior. 
+Attackers are modeled as having a budget, which is the maximum that they are willing to pay, and we can talk about 
+their cost, the amount that they end up paying to disrupt the protocol equilibrium.
+ 
+---
+
+**Bitcoin** analysis in different security models:
+
+| Model | Security Margin |
+| ---  | --- |
+| Honest Majority | 0.5 - 51% attack | 
+| Uncoordinated Majority | 0.2321 - selfish mining attack |
+| Coordinated Majority | 0 |
+| Bribing Attacker | 13.2 * k budget, 0 cost |
+ 
+**[Shelling coin](https://blog.ethereum.org/2015/01/28/p-epsilon-attack/)** analysis in different security models:
+
+| Model | Security Margin |
+| ---  | --- |
+| Honest Majority | 0.5 - 51% attack | 
+| Uncoordinated Majority | 0.5 |
+| Coordinated Majority | 0 |
+| Bribing Attacker | 0.5 budget, 0 cost |
 
 
 ---
