@@ -64,24 +64,30 @@ their cost, the amount that they end up paying to disrupt the protocol equilibri
  
 ---
 
-**Bitcoin** analysis in different security models:
+**[Bitcoin with selfish mining fix](https://arxiv.org/abs/1311.0243)** analysis:
 
 | Model | Security Margin |
 | ---  | --- |
-| Honest Majority | 0.5 - 51% attack | 
-| Uncoordinated Majority | 0.2321 - selfish mining attack |
+| Honest Majority | 0.5 (51% attack) | 
+| Uncoordinated Majority | 0.25 (selfish mining attack)* |
 | Coordinated Majority | 0 |
 | Bribing Attacker | 13.2 * k budget, 0 cost |
+
+<nowiki>*</nowiki> (1) Assuming more than 0.5 of the economic set are coordinated.
+(2) Without the selfish mining fix the security margin in uncoordinated majority model is epsilon 
+(slighter greater than 0).
  
-**[Shelling coin](https://blog.ethereum.org/2015/01/28/p-epsilon-attack/)** analysis in different security models:
+**[Shelling coin](https://blog.ethereum.org/2015/01/28/p-epsilon-attack/)** analysis:
 
 | Model | Security Margin |
 | ---  | --- |
-| Honest Majority | 0.5 - 51% attack | 
-| Uncoordinated Majority | 0.5 |
+| Honest Majority | 0.5 (51% attack) | 
+| Uncoordinated Majority | 0.25 ** |
 | Coordinated Majority | 0 |
 | Bribing Attacker | 0.5 budget, 0 cost |
 
+** The attacker only needs to possess half of the coordinated part of the economic set. 
+The other half has an incentive to vote with the attacker. 
 
 ---
 
