@@ -13,6 +13,7 @@ of that system. (Vitalik Buterin)
 
 - [Concepts](#concepts)
 - [Security Models](#security-models)
+- [Examples of Cryptoeconomic Systems](#examples-of-cryptoeconomic-systems)
 - [Useful Links](#useful-links)
 
 ---
@@ -52,6 +53,7 @@ and the remaining agents honestly follow the protocol.
 
 **Uncoordinated Majority** - assumes that up to X (often between 1/4 and 1/2) of agents are capable of coordinating 
 their actions, all agents are rational in a game-theoretic sense.
+ - additional parameter - level of coordination.
 
 **Coordinated Majority** - assumes that all agents are controlled by the same actor, or are fully capable of coordinating 
 on the economically optimal choice between themselves. We can talk about the cost to the coalition 
@@ -61,6 +63,7 @@ on the economically optimal choice between themselves. We can talk about the cos
 the attacker sits outside the protocol, and has the ability to bribe any participants to change their behavior. 
 Attackers are modeled as having a budget, which is the maximum that they are willing to pay, and we can talk about 
 their cost, the amount that they end up paying to disrupt the protocol equilibrium.
+ - additional parameter - budget requirement.
  
 ---
 
@@ -88,6 +91,19 @@ their cost, the amount that they end up paying to disrupt the protocol equilibri
 
 ** The attacker only needs to possess half of the coordinated part of the economic set. 
 The other half has an incentive to vote with the attacker. 
+
+---
+
+### Examples of Cryptoeconomic Systems
+
+ - Consensus algorithms
+ - Outsources computation and storage
+ - Provable fair random number generation
+ - Providing true information about the world (oracles)
+ - Governance (DAOs)
+ - Stable-value cryptocurrencies (stablecoin)
+ - Bounties to solutions to math or CS problems
+ - Telling the time
 
 ---
 
