@@ -12,7 +12,10 @@ of that system. (Vitalik Buterin)
 ### Table of Content
 
 - [Related Fields](#related-fields)
-- [Building Blocks](#building-blocks)
+  - [Cryptography](#cryptography)
+  - [Economy](#economy)
+  - [Game Theory / Mechanism Design](#game-theory-mechanism-design)
+  - [Distributed Systems](#distributed-systems)
 - [Concepts](#concepts)
 - [Security Models](#security-models)
 - [Examples of Cryptoeconomic Systems](#examples-of-cryptoeconomic-systems)
@@ -20,9 +23,9 @@ of that system. (Vitalik Buterin)
 
 ---
 
-### Building Blocks
+### Related Fields
 
-**From cryptography**:
+#### Cryptography
 
 - Hashes
 - Signatures
@@ -32,29 +35,36 @@ of that system. (Vitalik Buterin)
 - Timelock crypto / sequential PoW
 - Homomorphic encryption / obfuscation
 
-**From economy**:
+#### Economy
 
 Incentives: 
 
 - rewards/penalties
 - privileges
 
+#### Game Theory / Mechanism Design
+
+- [VCG](#https://github.com/medvedev1088/game-theory-cheat-sheet#vcg)
+  - susceptible to collusion, hard to apply in cryptoeconomics
+- [Coalitional Games](https://github.com/medvedev1088/game-theory-cheat-sheet#coalitional-games)
+
+#### Distributed Systems
+
+- Byzantine Fault Tolerance (BFT)
+
 ---
 
 ### Concepts
 
-**Economic resource** - a resource possession of which gives agents the right to collectively perform state transitions 
-in the cryptoeconomic system.
- - computing power
- - cryptocurrency / token
+**Economic resource** - a resource, possession of which gives agents the right to collectively perform state transitions 
+in the cryptoeconomic system. E.g. hashing power, stake, tokens.
 
-**Economic set** - all agents possessing economic resource.
+**Economic set** - all agents possessing the economic resource.
 
-**Cryptoeconomic Security Margin** - an amount of money X such that you can prove "either a given guarantee G is 
-satisfied or those at fault for violating G are poorer than they otherwise would have been by at least X".
- - if expressed as a percentage or a ratio, represents the ratio of the economic set, e.g. security margin of 0.5
- means that it costs the attacker half of all computing power cost to violate the guarantee G.
- 
+**Cryptoeconomic Security Margin** - a fraction of cryptoeconomic resource X such that you can prove "either a given 
+guarantee G is satisfied or those at fault for violating G are poorer than they otherwise would have been by at least X 
+fraction of the cryptoeconomic resource". E.g. security margin of 0.5 means that it costs the attacker half of all 
+hashing power to violate the guarantee G.
 
 **Cryptoeconomic proof** - a message signed by an actor that can be interpreted as "I certify that either P is true,
 or I suffer an economic loss of size X".
@@ -76,41 +86,41 @@ and the remaining agents honestly follow the protocol.
 
 **Uncoordinated Majority** - assumes that up to X (often between 1/4 and 1/2) of agents are capable of coordinating 
 their actions, all agents are rational in a game-theoretic sense.
- - additional parameter - level of coordination.
+ - model parameter - level of coordination X.
 
 **Coordinated Majority** - assumes that all agents are controlled by the same actor, or are fully capable of coordinating 
 on the economically optimal choice between themselves. We can talk about the cost to the coalition 
 (or profit to the coalition) of achieving some undesirable outcome.
+ - model parameter - level of coordination X (close to 1).
 
 **Bribing Attacker** - takes the uncoordinated majority model, but instead of making the attacker be one of the participants, 
 the attacker sits outside the protocol, and has the ability to bribe any participants to change their behavior. 
 Attackers are modeled as having a budget, which is the maximum that they are willing to pay, and we can talk about 
 their cost, the amount that they end up paying to disrupt the protocol equilibrium.
- - additional parameter - budget requirement.
+ - model parameter - attacker's budget B.
  
 ---
 
 **[Bitcoin with selfish mining fix](https://arxiv.org/abs/1311.0243)** analysis:
 
-| Model | Security Margin |
-| ---  | --- |
-| Honest Majority | 0.5 (51% attack) | 
-| Uncoordinated Majority | 0.25 (selfish mining attack)* |
-| Coordinated Majority | 0 |
-| Bribing Attacker | 13.2 * k budget, 0 cost |
+| Model | Parameters | Security Margin |
+| ---  | --- | --- |
+| Honest Majority |  | ~0.5 (51% attack) | 
+| Uncoordinated Majority | Level of coordination ~0.5 | ~0.25 (selfish mining attack)* |
+| Coordinated Majority | Level of coordination ~1 | 0 |
+| Bribing Attacker | Budget > 13.2 * number_of_blocks | ~0 |
 
-<nowiki>*</nowiki> (1) Assuming more than 0.5 of the economic set are coordinated.
-(2) Without the selfish mining fix the security margin in uncoordinated majority model is epsilon 
+<nowiki>*</nowiki> Without the selfish mining fix the security margin in uncoordinated majority model is epsilon 
 (slighter greater than 0).
  
 **[Shelling coin](https://blog.ethereum.org/2015/01/28/p-epsilon-attack/)** analysis:
 
-| Model | Security Margin |
-| ---  | --- |
-| Honest Majority | 0.5 (51% attack) | 
-| Uncoordinated Majority | 0.25 ** |
-| Coordinated Majority | 0 |
-| Bribing Attacker | 0.5 budget, 0 cost |
+| Model | Parameters | Security Margin |
+| ---  | --- | --- |
+| Honest Majority |  | 0.5 (51% attack) | 
+| Uncoordinated Majority | Level of coordination ~0.5 | ~0.25 ** |
+| Coordinated Majority | Level of coordination ~1 | 0 |
+| Bribing Attacker | Budget > 0.5 | ~0 |
 
 ** The attacker only needs to possess half of the coordinated part of the economic set. 
 The other half has an incentive to vote with the attacker. 
@@ -144,4 +154,5 @@ The other half has an incentive to vote with the attacker.
 - A Crash Course in Mechanism Design for Cryptoeconomic Applications https://medium.com/blockchannel/a-crash-course-in-mechanism-design-for-cryptoeconomic-applications-a9f06ab6a976
 - Cryptoeconomics gitbook https://dapp-studies.gitbooks.io/cryptoeconomics/content/
 - Game Theory Cheat Sheet https://github.com/medvedev1088/game-theory-cheat-sheet
+- What is Cryptoeconomics? The Ultimate Beginners Guide https://blockgeeks.com/guides/what-is-cryptoeconomics/
 
