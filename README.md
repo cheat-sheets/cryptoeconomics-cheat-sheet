@@ -143,7 +143,7 @@ A number of protocols, including consensus protocols, blockchain-based lotteries
 require some kind of random number generation in the protocol. There are a number of alternatives with their 
 pros and cons:
 
-- PoW - use block hashes
+- PoW - use block hash
 - N-of-N commit-reveal ([RANDAO](https://github.com/randao/randao))
 - Oracles
 - Timelock crypto
@@ -167,4 +167,5 @@ pros and cons:
 - Cryptoeconomics gitbook https://dapp-studies.gitbooks.io/cryptoeconomics/content/
 - Game Theory Cheat Sheet https://github.com/medvedev1088/game-theory-cheat-sheet
 - What is Cryptoeconomics? The Ultimate Beginners Guide https://blockgeeks.com/guides/what-is-cryptoeconomics/
+- Making Sense of Cryptoeconomics, Josh Stark https://medium.com/l4-media/making-sense-of-cryptoeconomics-c6455776669
 
