@@ -18,7 +18,15 @@ of that system. (Vitalik Buterin)
   - [Distributed Systems](#distributed-systems)
 - [Concepts](#concepts)
 - [Security Models](#security-models)
-- [Examples of Cryptoeconomic Systems](#examples-of-cryptoeconomic-systems)
+- [Cryptoeconomic Systems](#cryptoeconomic-systems)
+  - Consensus algorithms
+  - Outsources computation and storage
+  - [Random number generation](#random-number-generation)
+  - Providing true information about the world (oracles)
+  - Governance (DAOs)
+  - Stable-value cryptocurrencies
+  - Bounties to solutions to math or CS problems
+  - Telling the time
 - [Resources](#resources)
 
 ---
@@ -79,25 +87,25 @@ the security of a system.
 
 Different security models give different security margins.
 
-**Honest Majority** - assumes that up to X (usually a number less that 1/2) of agents are controlled by an attacker, 
+- **Honest Majority** - assumes that up to X (usually a number less that 1/2) of agents are controlled by an attacker, 
 and the remaining agents honestly follow the protocol.
- - **Tranditional Fault Tolerance** - assumes almost all agents are honest (X is close to 0).
- - **Bysantine Fault Tolerance** - assumes up to 1/3 of agents are controlled by an attacker.
+  - **Tranditional Fault Tolerance** - assumes almost all agents are honest (X is close to 0).
+  - **Bysantine Fault Tolerance** - assumes up to 1/3 of agents are controlled by an attacker.
 
-**Uncoordinated Majority** - assumes that up to X (often between 1/4 and 1/2) of agents are capable of coordinating 
+- **Uncoordinated Majority** - assumes that up to X (often between 1/4 and 1/2) of agents are capable of coordinating 
 their actions, all agents are rational in a game-theoretic sense.
- - model parameter - level of coordination X.
+  - model parameter - level of coordination X.
 
-**Coordinated Majority** - assumes that all agents are controlled by the same actor, or are fully capable of coordinating 
+- **Coordinated Majority** - assumes that all agents are controlled by the same actor, or are fully capable of coordinating 
 on the economically optimal choice between themselves. We can talk about the cost to the coalition 
 (or profit to the coalition) of achieving some undesirable outcome.
- - model parameter - level of coordination X (close to 1).
+  - model parameter - level of coordination X (close to 1).
 
-**Bribing Attacker** - takes the uncoordinated majority model, but instead of making the attacker be one of the participants, 
+- **Bribing Attacker** - takes the uncoordinated majority model, but instead of making the attacker be one of the participants, 
 the attacker sits outside the protocol, and has the ability to bribe any participants to change their behavior. 
 Attackers are modeled as having a budget, which is the maximum that they are willing to pay, and we can talk about 
 their cost, the amount that they end up paying to disrupt the protocol equilibrium.
- - model parameter - attacker's budget B.
+  - model parameter - attacker's budget B.
  
 ---
 
@@ -127,16 +135,20 @@ The other half has an incentive to vote with the attacker.
 
 ---
 
-### Examples of Cryptoeconomic Systems
+### Cryptoeconomic Systems
 
- - Consensus algorithms
- - Outsources computation and storage
- - Provable fair random number generation
- - Providing true information about the world (oracles)
- - Governance (DAOs)
- - Stable-value cryptocurrencies (stablecoin)
- - Bounties to solutions to math or CS problems
- - Telling the time
+#### Random Number Generation
+
+A number of protocols, including consensus protocols, blockchain-based lotteries, scalable sampling schemes, etc, 
+require some kind of random number generation in the protocol. There are a number of alternatives with their 
+pros and cons:
+
+- PoW - use block hashes
+- N-of-N commit-reveal ([RANDAO](https://github.com/randao/randao))
+- Oracles
+- Timelock crypto
+ 
+
 
 ---
 
