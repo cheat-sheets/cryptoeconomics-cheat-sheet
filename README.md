@@ -119,7 +119,7 @@ their cost, the amount that they end up paying to disrupt the protocol equilibri
 | Bribing Attacker | Budget > 13.2 * number_of_blocks | ~0 |
 
 <nowiki>*</nowiki> Without the selfish mining fix the security margin in uncoordinated majority model is epsilon 
-(slighter greater than 0).
+(slightly greater than 0).
  
 **[Shelling coin](https://blog.ethereum.org/2015/01/28/p-epsilon-attack/)** analysis:
 
