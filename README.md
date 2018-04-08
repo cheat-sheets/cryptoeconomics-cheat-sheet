@@ -64,10 +64,10 @@ Incentives:
 
 ### Concepts
 
-**Economic resource** - a resource, possession of which gives agents the right to collectively perform state transitions 
+**Cryptoeconomic resource** - a resource, possession of which gives agents the right to collectively perform state transitions 
 in the cryptoeconomic system. E.g. hashing power, stake, tokens.
 
-**Economic set** - all agents possessing the economic resource.
+**Cryptoeconomic set** - all agents possessing the cryptoeconomic resource.
 
 **Cryptoeconomic Security Margin** - a fraction of cryptoeconomic resource X such that you can prove "either a given 
 guarantee G is satisfied or those at fault for violating G are poorer than they otherwise would have been by at least X 
