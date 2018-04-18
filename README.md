@@ -17,6 +17,7 @@ of that system. (Vitalik Buterin)
   - [Game Theory / Mechanism Design](#game-theory--mechanism-design)
   - [Distributed Systems](#distributed-systems)
 - [Concepts](#concepts)
+- [Assumptions](#assumptions)
 - [Security Models](#security-models)
 - [Cryptoeconomic Systems](#cryptoeconomic-systems)
   - Consensus algorithms
@@ -79,6 +80,25 @@ or I suffer an economic loss of size X".
 
 ---
 
+### Assumptions
+
+The basic security assumptions that cryptoeconomics depends on are the following:
+
+1. No set of individuals that control more than 25% of all computational resources is capable of colluding.
+1. No set of individuals that control more than 25% of all money is capable of colluding.
+1. The amount of computation of a certain proof of work function that can be accomplished with a given amount of money 
+is not superlinear beyond a point which is reasonably low.
+1. There exists a non-negligible number of altruists and a non-negligible number of crazies or political opponents of 
+the system, and the majority of users can be reasonably modeled as being close to economically rational.
+1. The number of users of a system is large, and users can appear or disappear at any time, although at least some 
+users are persistent.
+1. Censorship is impossible, and any two nodes can send messages to each other relatively quickly.
+1. It is trivial to generate a very large number of IP addresses, and one can purchase an unlimited amount of network 
+bandwidth.
+1. Many users are anonymous, so negative reputations and debts are close to unenforceable.
+
+---
+
 ### Security Models
 
 Security models are different in the assumptions that they make about the real world. It's not clear what assumptions
@@ -111,6 +131,8 @@ their cost, the amount that they end up paying to disrupt the protocol equilibri
 
 **[Bitcoin with selfish mining fix](https://arxiv.org/abs/1311.0243)** analysis:
 
+Guarantee G: there is no double spending. 
+
 | Model | Parameters | Security Margin |
 | ---  | --- | --- |
 | Honest Majority |  | ~0.5 (51% attack) | 
@@ -123,6 +145,8 @@ their cost, the amount that they end up paying to disrupt the protocol equilibri
  
 **[Shelling coin](https://blog.ethereum.org/2015/01/28/p-epsilon-attack/)** analysis:
 
+Guarantee G: the result of voting represents the reality. 
+
 | Model | Parameters | Security Margin |
 | ---  | --- | --- |
 | Honest Majority |  | 0.5 (51% attack) | 
@@ -130,8 +154,8 @@ their cost, the amount that they end up paying to disrupt the protocol equilibri
 | Coordinated Majority | Level of coordination ~1 | 0 |
 | Bribing Attacker | Budget > 0.5 | ~0 |
 
-** The attacker only needs to possess half of the coordinated part of the economic set. 
-The other half has an incentive to vote with the attacker. 
+** The attacker only needs to possess slightly more than half of the coordinated part of the economic set. 
+The other half has the incentive to vote with the attacker. 
 
 ---
 
