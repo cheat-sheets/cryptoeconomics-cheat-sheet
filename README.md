@@ -52,13 +52,13 @@ Incentives:
 
 #### Game Theory / Mechanism Design
 
-- [VCG](#https://github.com/medvedev1088/game-theory-cheat-sheet#vcg)
+- [VCG](https://github.com/medvedev1088/game-theory-cheat-sheet#vcg)
   - susceptible to collusion, hard to apply in cryptoeconomics
 - [Coalitional Games](https://github.com/medvedev1088/game-theory-cheat-sheet#coalitional-games)
 
 #### Distributed Systems
 
-- Byzantine Fault Tolerance (BFT)
+- [Byzantine Fault Tolerance (BFT)](https://en.wikipedia.org/wiki/Byzantine_fault_tolerance)
 
 ---
 
