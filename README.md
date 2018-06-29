@@ -9,7 +9,7 @@ of that system. (Vitalik Buterin)
 **Cryptoeconomics** (alternative definition) - the application of incentive mechanism design to information 
  security problems (Vlad Zamfir).
 
-### Table of Content
+### Table of Contents
 
 - [Related Fields](#related-fields)
   - [Cryptography](#cryptography)
